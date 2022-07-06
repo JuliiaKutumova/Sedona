@@ -1,0 +1,27 @@
+{
+	"folders": [
+		{
+			"path": "..\\Барбершоп_Бородинский\\css"
+		},
+		{
+			"path": "..\\Барбершоп_Бородинский\\svg"
+		},
+		{
+			"path": "..\\Барбершоп_Бородинский\\fonts"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "css"
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"type": "pwa-chrome",
+				"request": "launch",
+				"name": "Open sedona-index.html",
+				"file": "c:\\Users\\masyanya\\Documents\\IT\\HTML академия-курсы\\Домашняя работа\\Личный проект Седона\\sedona-index.html"
+			}
+		]
+	}
+}
