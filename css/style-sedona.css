@@ -319,6 +319,8 @@ img {
     line-height: 36px;
     text-align: center;
     color: var(--basic-black);
+    margin: 0;
+    padding-top: 33px;
 }
 
 
@@ -326,6 +328,9 @@ img {
     font-size: 14px;
     line-height: 24px;
     text-align: center;
+    margin: 0;
+    margin-top: 31px;
+    margin-bottom: 73px;
 }
 
 .form-label .count-button {
@@ -339,12 +344,19 @@ img {
 
 
 .button {
+    position: relative;
     color: var(--basic-white);
     background-color: var(--basic-brown);
     font-weight: 700;
     font-size: 21px;
     line-height: 26px;
     text-align: center;
+    text-transform: uppercase;
+    width: 568px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    cursor: pointer;
+    border: none;
 }
 
 .button-search {
