@@ -762,10 +762,18 @@ img {
     opacity: 0.3;
 }
 
+/* Rate*/
 
-.rate {
+.stars {
+    text-align: right;
+}
+
+.hotel-rate {
+    display: block;
     color: var(--basic-dark-gray);
     width: 110px;
-    height: 27px;
     background-color: var(--basic-extra-light);
+    margin-top: 48px;
+    text-align: center;
+    
 }
