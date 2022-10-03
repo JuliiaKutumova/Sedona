@@ -53,7 +53,8 @@ img {
     padding: 0;
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 /* Main header */
 
@@ -582,14 +583,43 @@ img {
 
 /* Filters */
 
+.filters-block {
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--basic-white);
+    background-image: url(../img/filter-background.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 -55px;
+}
+
+.filters-block fieldset {
+    border: none;
+    width: 175px;
+    margin: 0;
+    padding: 0;
+    margin-right: 85px;
+}
+
+.filters-block label {
+    display: block;
+    position: relative;
+    line-height: 21px;
+    cursor: pointer;
+}
 .filters-list {
+    line-height: 21px;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.filters-item ul {
-    margin: 0;
+.filters-item {
+    margin-bottom: 25px;
+    padding-left: 40px;
+}
+
+.filters-list li:last-child {
+    margin-bottom: 30px;
 }
 
 .filters-form {
@@ -601,32 +631,42 @@ img {
     padding-bottom: 32px;
 }
 
-.filter-one {
-    margin-right: 119px;
-}
 
-.filter-two {
-    margin-right: 347px;
-}
 
-.filter-one .filters-list,
-.filter-two .filters-list {
-    margin-bottom: 25px;
-}
 
-.filters-form h2 {
+.filters-form legend {
+    line-height: 21px;
     font-weight: 700;
     font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
 }
 
-.filters {
-    color: var(--basic-white);
-    background-image: url(./img/filter-background.jpg);
+
+.filter-input + label::before {
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    left: -40px;
+    top: -2px;
+    border: 2px solid var(--basic-white);
+    border-radius: 4px;
+}
+
+.filter-input:checked + label::after {
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 18px;
+    left: -38px;
+    top: -2px;
+    background-image: url(/img/shape.svg);
     background-repeat: no-repeat;
-    background-position: 0 -55px;
 }
 
-.filters-cost h2 {
+
+.filters-cost legend {
     font-weight: 700;
     font-size: 16px;
     color: var(--basic-white);
@@ -775,5 +815,5 @@ img {
     background-color: var(--basic-extra-light);
     margin-top: 48px;
     text-align: center;
-    
+
 }
