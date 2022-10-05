@@ -390,7 +390,8 @@ img {
 }
 
 
-.button-book {
+.booking {
+    display: inline-block;
     color: var(--basic-white);
     background-color: var(--basic-brown);
     font-weight: 700;
@@ -398,24 +399,26 @@ img {
     line-height: 21px;
     text-transform: uppercase;
     align-items: center;
+    border: none;
+    padding: 3px 16px;
 }
 
-.button-book:hover {
+.booking:hover {
     color: var(--basic-white);
     background-color: var(--basic-dark-brown);
 }
 
-.button-book:focus {
+.booking:focus {
     background-color: var(--basic-extra-brown);
     color: var(--basic-brown);
 }
 
-.button-detail {
-    border: 1px solid var(--basic-blue);
+.detail {
+    display: inline-block;
     padding-top: 3px;
-    padding-right: 3px;
+    padding-right: 16px;
     padding-bottom: 3px;
-    padding-left: 3px;
+    padding-left: 16px;
     background-color: var(--basic-blue);
     color: var(--basic-white);
     font-weight: 700;
@@ -423,11 +426,11 @@ img {
     line-height: 21px;
 }
 
-.button-detail:hover {
+.detail:hover {
     background-color: var(--basic-dark-blue);
 }
 
-.button-detail:focus {
+.detail:focus {
     background-color: var(--basic-extra-blue);
     color: var(--basic-blue);
 }
@@ -666,10 +669,65 @@ img {
 }
 
 
-.filters-cost legend {
+.filter-cost-title {
     font-weight: 700;
     font-size: 16px;
     color: var(--basic-white);
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+
+.filters-cost {
+    width: 319px;
+    margin-left: 218px;
+}
+
+.filter-price {
+    height: 36px;
+    border: 2px solid var(--basic-white);
+    margin-bottom: 18px;
+    position: relative;
+}
+
+.filter-price::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 22px;
+    background: var(--basic-white);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.filter-price label {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 21px;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.filter-price .cost-min {
+    width: 90px;
+    padding-left: 65px;
+    padding-top: 6px;
+}
+
+.filter-price .cost-max {
+    width: 90px;
+    padding-left: 58px;
+    padding-top: 6px;
+}
+
+.filter-price input {
+    width: 50px;
+    margin: 0;
+    color: inherit;
+    font: inherit;
+    background: none;
+    border: none;
+    line-height: 1;
 }
 
 /* Sort */
@@ -686,6 +744,7 @@ img {
 
 .sort-list {
     display: flex;
+    align-items: center;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -706,9 +765,14 @@ img {
     line-height: 18px;
 }
 
-.sort-list a {
+.sort-link {
     font-size: 12px;
     line-height: 18px;
+    color: var(--basic-black);
+    mix-blend-mode: normal;
+    opacity: 0.3;
+    cursor: pointer;
+    border-bottom: 1px dotted var(--basic-blue);
 }
 
 
@@ -716,47 +780,54 @@ img {
     margin-right: 32px;
 }
 
-.sort-item-price a,
-.sort-item-price a:active {
-    margin-right: 32px;
+.sort-link:hover {
     color: var(--basic-blue);
 }
 
-.sort-link {
+.sort-link:focus,
+.sort-link:active {
     color: var(--basic-black);
-    mix-blend-mode: normal;
-    opacity: 0.3;
+    border-bottom: none;
 }
 
-
-.sort-item a {
-    border-bottom: 1px dotted var(--basic-blue);
-}
-
-.sort-item a:hover {
+.sort-link-active {
     color: var(--basic-blue);
+    border-bottom: none;
 }
 
-.sort-item a:focus {
-    color: var(--basic-black);
+.sort-arrow {
+    margin-left: auto;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
-.arrow-up svg,
-.arrow {
-    fill: var(--basic-extra-light-gray);
+a.arrow {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 0;
+}
+.arrow::before {
+    display: inline-block;
+    border: 10px solid var(--basic-extra-light-gray);
+    border-right-width: 5px;
+    border-right-color: transparent;
+    border-left-width: 5px;
+    border-left-color: transparent;
+    content: "";
+}
+.arrow-up::before {
+    border-top-width: 0;
+}
+.arrow-down::before {
+    border-bottom-width: 0;
+}
+.arrow-down-active {
+    border-top-color: var(--basic-blue);
+}
+.arrow-up:hover {
+     border-bottom-color: var(--basic-black);
 }
 
-.arrow svg:hover {
-    fill: var(--basic-black);
-}
-
-.arrow svg:focus {
-    fill: var(--basic-blue);
-}
-
-.arrow-down svg:active {
-    fill: var(--basic-blue);
-}
 
 /* Catalog */
 
@@ -779,11 +850,20 @@ img {
 
 .hotel-card { 
     margin-left: 30px;
+    position: relative;
 }
-.hotel .hotel-price {
+.hotel,
+.hotel-price {
+    display: inline-block;
+    margin: 0;
+    margin-top: 7px;
     color: var(--basic-extra-dark);
 }
 
+.hotel {
+    width: 110px;
+    margin-right: 1px;
+}
 .hotel-title a {
     font-weight: 700;
     font-size: 21px;
@@ -802,6 +882,10 @@ img {
     opacity: 0.3;
 }
 
+.hotel-card .detail {
+    margin-top: 9px;
+    margin-right: 3px;
+}
 /* Rate*/
 
 .stars {
