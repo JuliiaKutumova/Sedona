@@ -342,6 +342,9 @@ img {
     position: absolute;
     background-color: var(--basic-box-light-gray);
     box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+    box-shadow:
+    inset 0px 8px 8px 8px var(--basic-extra-light),
+       inset 0 0 0 10px var(--basic-box-light-gray);
 }
 
 .booking-form {
@@ -444,6 +447,9 @@ img {
     display: flex;
 }
 
+.booking-item:nth-child(3) label {
+    margin-right: 38px;
+}
 .booking-item:nth-child(4) label {
     margin-left: 50px;
 }
@@ -472,22 +478,20 @@ img {
 plus::before {
     content: "";
     background: var(--basic-gray);
-    height: 11px;
+    height: 12px;
     width: 3px;
     position: absolute;
     left: 17px;
     top: 13px;
+    rotate: 90deg;
 }
-
 .plus::after {
     content: "";
-    height: 3px; 
-    width: 11px;
-    background: var(--basic-gray);
-    position: absolute; 
-    left: 13px; 
-    top: 17px;
+    height: 3px; width: 12px;
+    background: #a9a9a9;
+    position: absolute; left: 13px; top: 17px;
 }
+
 
 .plus:hover::before,
 .plus:hover::after {
@@ -503,7 +507,7 @@ plus::before {
 .minus::after {
     content: "";
     height: 3px; 
-    width: 11px;
+    width: 12px;
     background: var(--basic-gray);
     position: absolute; 
     left: 13px; 
@@ -544,6 +548,14 @@ plus::before {
     font-size: 21px;
     line-height: 26px;
     text-align: center;
+    border: none;
+    width: 460px;   
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 55px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    cursor: pointer;
 }
 
 .button-display {
