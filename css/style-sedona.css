@@ -16,6 +16,7 @@
     --basic-extra-light-gray: #CACACA;
     --basic-graphite: #ababab;
     --basic-light-graphite: #ebebeb;
+    --basic-dark-graphite: #667883;
     --basic-box-light-gray: #e5e5e5;
     --basic-green:#00ca74;
     --box-shadow: rgba(0, 1, 1, 0.2);
@@ -1015,7 +1016,7 @@ plus::before {
 }
 
 .sort-link-active {
-    color: var(--basic-blue);
+    color: var(--basic-dark-graphite);
     border-bottom: none;
 }
 
